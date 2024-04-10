@@ -1,0 +1,162 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  transition: background-color 0.5s ease; /* Ajout de transition */
+}
+
+header {
+  background-color: rgba(36, 36, 36, 0.856);
+  color: #fff;
+  padding: 1%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.material-icons {
+  font-size: 60px;
+  padding-left: 97%;
+}
+
+.login-form {
+  background-color: black;
+  border: 2px solid violet;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+}
+
+.login-form h2 {
+  text-align: center;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid violet;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttoncustom {
+  backface-visibility: hidden;
+  background: #332cf200;
+  border: 2px solid violet;
+  border-radius: .375rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Circular, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.3;
+  padding: 1rem 1.25rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttoncustom:disabled {
+  color: #787878;
+  cursor: auto;
+}
+
+.buttoncustom:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.buttoncustom:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+.buttoncustom:focus {
+  outline: 0 solid transparent;
+}
+
+.buttoncustom:focus:before {
+  border-width: .125rem;
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.buttoncustom:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+.buttoncustom:not(:disabled):active {
+  transform: translateY(.125rem);
+}
+
+.form-group input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  position: relative;
+  cursor: pointer;
+  display: inline-block; /* Permet de régler correctement la taille de l'élément */
+  vertical-align: middle; /* Aligne l'élément verticalement */
+  padding-left: 30px;
+}
+
+.checkbox-custom::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Déplace l'élément au centre vertical */
+  transform: translateY(-50%); /* Centre verticalement l'élément */
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid violet;
+  border-radius: 3px;
+  background-color: black;
+}
+
+.checkbox-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* Déplace l'élément au centre vertical */
+  transform: translateY(-50%); /* Centre verticalement l'élément */
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: violet;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
